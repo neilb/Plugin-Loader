@@ -119,8 +119,26 @@ L<Mojo::Loader> was the inspiration for this module, but has
 a slightly different interface. In particular, it has C<max_depth>
 hard-coded to 1.
 
-L<all>, L<lib::require::all>, L<MAD::Loader>,
-L<Module::Find>, L<Module::Recursive::Require>, L<Module::Require>.
+L<all> will load all modules in a given namespace, eg with C<use all 'IO::*';>
+
+L<lib::require::all> will load all modules found in a given I<directory>
+(as opposed to a namespace).
+
+L<MAD::Loader> provides functions for loading modules,
+but not for finding them.
+
+L<Module::Find> provides a number of functions for finding and loading
+modules. It provides different functions depending on whether you want
+to limit the search depth to 1 or not: C<findallmod> vs C<findsubmod>.
+
+L<Module::Recursive::Require> will load all modules in a given namespace,
+and return a list of the modules found / loaded.
+It lets you provide regexps for filtering out certain namespaces.
+
+L<Module::Require> provides two functions, C<require_regex>
+and C<require_glob> which will load all locally installed modules
+whose name matches a pattern (specified as a regular expression
+or glob-style pattern).
 
 =head1 REPOSITORY
 
