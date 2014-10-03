@@ -1,5 +1,10 @@
 Revision history for Perl module Plugin::Loader
 
+0.02 2014-10-03 NEILB
+    - Added a max_depth attribute, so you can control whether you want
+      all modules within the namespace, or only to a given search depth
+      (typically 1, if anything).
+
 0.01 2014-09-30 NEILB
     - First release to CPAN
 
