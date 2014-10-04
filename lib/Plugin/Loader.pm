@@ -2,9 +2,9 @@ package Plugin::Loader;
 
 use 5.006;
 use Moo;
-use File::Spec::Functions qw/ catfile splitdir /;
 use Path::Iterator::Rule;
-use Carp qw/ croak /;
+use File::Spec::Functions   qw/ catfile splitdir /;
+use Carp                    qw/ croak /;
 
 has 'max_depth' => (is => 'rw');
 
@@ -58,8 +58,7 @@ Plugin::Loader - finding and loading modules in a given namespace
 
  use Plugin::Loader;
 
- my $loader = Plugin::Loader->new;
-
+ my $loader  = Plugin::Loader->new;
  my @plugins = $loader->find_modules('MyApp::Plugin');
 
  foreach my $plugin (@plugins) {
