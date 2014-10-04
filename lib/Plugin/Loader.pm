@@ -12,25 +12,27 @@ sub find_modules
 {
     my ($self, $base) = @_;
     my @baseparts     = split(/::/, $base);
-    my ($modpath, $module);
     my %modules;
 
     foreach my $directory (@INC) {
         my $path = catfile($directory, @baseparts);
         next unless -d $path;
 
-        my $rule = Path::Iterator::Rule->new;
-        $rule->perl_module;
+        my $rule = Path::Iterator::Rule->new->perl_module;
         $rule->max_depth($self->max_depth) if $self->max_depth;
+
         foreach my $file ($rule->all($path)) {
             my $modpath = $file;
 
-            $modpath =~ s!^\Q$directory\E|\.pm$!!g;
-            my @parts = splitdir($modpath);
-            shift @parts;
-            $modules{ join('::', @parts) }++;
+            $modpath =~ s!^\Q$directory\E.|\.pm$!!g;
+            my $module = join('::', splitdir($modpath));
+
+            # Using a hash means that even if a module is installed
+            # in more than one place, it will only be reported once
+            $modules{ $module }++;
         }
     }
+
     return keys(%modules);
 }
 
