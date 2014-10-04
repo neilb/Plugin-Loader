@@ -1,6 +1,7 @@
 Revision history for Perl module Plugin::Loader
 
 0.04 2014-10-04 NEILB
+    - Added Module::Pluggable and Module::Pluggable::Ordered to SEE ALSO.
     - Code tidy-up
 
 0.03 2014-10-04 NEILB

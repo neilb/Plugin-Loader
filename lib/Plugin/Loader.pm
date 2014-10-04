@@ -117,6 +117,12 @@ L<Mojo::Loader> was the inspiration for this module, but has
 a slightly different interface. In particular, it has C<max_depth>
 hard-coded to 1.
 
+L<Module::Pluggable> is effectively a role which gives a class the ability
+to find plugins within its namespace.
+
+L<Module::Pluggable::Ordered> is similar to L<Module::Pluggable>,
+but lets you control the order in which modules are loaded.
+
 L<all> will load all modules in a given namespace, eg with C<use all 'IO::*';>
 
 L<lib::require::all> will load all modules found in a given I<directory>
