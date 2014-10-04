@@ -110,7 +110,7 @@ that were found in C<@INC>. For example:
 By default this will find all modules in the given namespace,
 unless you've specified a maximum search depth, as described above.
 
-=head2 load_module
+=head2 load
 
 Takes a module name and tries to load the module.
 If loading fails, then we C<croak>.
