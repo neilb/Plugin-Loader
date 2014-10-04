@@ -22,9 +22,8 @@ sub find_modules
         $rule->max_depth($self->max_depth) if $self->max_depth;
 
         foreach my $file ($rule->all($path)) {
-            my $modpath = $file;
+            (my $modpath = $file) =~ s!^\Q$directory\E.|\.pm$!!g;
 
-            $modpath =~ s!^\Q$directory\E.|\.pm$!!g;
             my $module = join('::', splitdir($modpath));
 
             # Using a hash means that even if a module is installed

@@ -1,5 +1,8 @@
 Revision history for Perl module Plugin::Loader
 
+0.04 2014-10-04 NEILB
+    - Code tidy-up
+
 0.03 2014-10-04 NEILB
     - Clarification in the doc on the use of max_depth.
     - Tidied up the find_modules() method.
