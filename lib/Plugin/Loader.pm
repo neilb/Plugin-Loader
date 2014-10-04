@@ -83,7 +83,7 @@ If you set this to 1, then C<find_modules> will only report modules
 that are immediately within the namespace specified.
 
 Let's say you have all of the CPAN plugins for the template toolkit
-installed locally. If you don't specify C<max_depth>, then C<find_modules>
+installed locally. If you don't specify C<max_depth>, then C<find_modules('Template::Plugin')>
 would return L<Template::Plugin::Filter::Minify::JavaScript>
 as well as L<Template::Plugin::File>. If you set C<max_depth> to 1,
 then you'd get the latter but not the former.
