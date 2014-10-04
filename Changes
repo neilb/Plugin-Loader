@@ -4,6 +4,7 @@ Revision history for Perl module Plugin::Loader
     - Clarification in the doc on the use of max_depth.
     - Tidied up the find_modules() method.
     - Added testsuite for find_modules() method: t/02-find-modules.t
+    - Added testsuite for load() method: t/03-load.t
 
 0.02 2014-10-03 NEILB
     - Added a max_depth attribute, so you can control whether you want
