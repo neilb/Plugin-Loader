@@ -42,9 +42,7 @@ sub load
 
     require Module::Runtime;
     foreach my $module (@modules) {
-        if (!Module::Runtime::require_module($module)) {
-            croak "failed to load module '$module'";
-        }
+        Module::Runtime::require_module($module);
     }
 }
 

@@ -5,6 +5,8 @@ Revision history for Perl module Plugin::Loader
     - Tidied up the find_modules() method.
     - Added testsuite for find_modules() method: t/02-find-modules.t
     - Added testsuite for load() method: t/03-load.t
+    - Refactored load() method: running Devel::Cover helped me realised
+      I was expecting incorrect behaviour from require_module.
     - The code and SYNOPSIS had a 'load()' method, but the pod called
       it 'load_module()'. Changed the latter to 'load'.
 
