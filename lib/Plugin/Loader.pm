@@ -66,6 +66,11 @@ Plugin::Loader - finding and loading modules in a given namespace
 
 =head1 DESCRIPTION
 
+B<Note>: this module has now been renamed to L<Module::Loader>.
+In the slim chance that you'd started using C<Plugin::Loader>,
+my apologies, and please switch to using L<Module::Loader>.
+C<Plugin::Loader> will eventually be removed from CPAN.
+
 This module provides methods for finding modules in a given namespace,
 and then loading them. It is intended for use in situations where
 you're looking for plugins, and then loading one or more of them.
@@ -112,6 +117,8 @@ Takes a module name and tries to load the module.
 If loading fails, then we C<croak>.
 
 =head1 SEE ALSO
+
+L<Module::Loader> the new name for Plugin::Loader.
 
 L<Mojo::Loader> was the inspiration for this module, but has
 a slightly different interface. In particular, it has C<max_depth>

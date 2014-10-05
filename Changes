@@ -1,6 +1,9 @@
 Revision history for Perl module Plugin::Loader
 
 0.05 2014-10-05 NEILB
+    - Noted in the doc that this is now being maintained under the new
+      name of Module::Loader, and that Plugin::Loader will eventually be
+      removed from CPAN.
     - Changed "use lib 't/lib';" to more OS-portable version -- some tests were
       failing on Win32.
 
