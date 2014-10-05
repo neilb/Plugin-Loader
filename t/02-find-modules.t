@@ -6,7 +6,12 @@ use warnings;
 
 use Test::More 0.88;
 
-use lib 't/lib';
+use File::Spec::Functions qw/ catfile /;
+BEGIN {
+    # OS-portable version of "use lib 't/lib';"
+    # Otherwise this test will fail on Win32
+    push(@INC, catfile('t', 'lib'));
+}
 use Plugin::Loader;
 
 my ($loader, @modules);

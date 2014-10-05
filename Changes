@@ -1,5 +1,9 @@
 Revision history for Perl module Plugin::Loader
 
+0.05 2014-10-05 NEILB
+    - Changed "use lib 't/lib';" to more OS-portable version -- some tests were
+      failing on Win32.
+
 0.04 2014-10-04 NEILB
     - Added Module::Pluggable and Module::Pluggable::Ordered to SEE ALSO.
     - Code tidy-up
